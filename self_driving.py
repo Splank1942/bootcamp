@@ -44,7 +44,7 @@ if destination == "school":
     print("We arrived at the school, hooray science!")
 
 
-elif destination == "grocery store":
+elif destination == "grocery store" or destination == "dentist":
     start_engine()
     reverse()
     move_forward()
@@ -52,13 +52,20 @@ elif destination == "grocery store":
     turn("left")
     move_forward()
     stop_moving()
-    turn("right")
-    move_forward()
-    park()
-    stop()
-    stop_engine()  
-    print("We arrived at the grocery store, nom nom nom!")
-
+    if destination == "grocery store":
+        turn("right")
+        move_forward()
+        park()
+        stop()
+        stop_engine()  
+        print("We arrived at the grocery store, nom nom nom!")
+    else:
+        turn("left")
+        move_forward()
+        park()
+        stop()
+        stop_engine()  
+        print("We arrived at the dentist! I hope he prescibes pain meds, ouch!")
 elif destination == "restaurant":
     start_engine()
     reverse()
