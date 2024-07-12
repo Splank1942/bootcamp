@@ -20,11 +20,12 @@ def park():
 
 destination = input("Where do you want to go? ")
 
-start_engine()
-move_forward()
-stop_moving()
+
 
 if destination == "school":
+    start_engine()
+    move_forward()
+    stop_moving()
     turn("right")
     move_forward()
     stop_moving()
@@ -37,6 +38,9 @@ if destination == "school":
 
 
 elif destination == "grocery store":
+    start_engine()
+    move_forward()
+    stop_moving()
     turn("left")
     move_forward()
     stop_moving()
@@ -46,3 +50,6 @@ elif destination == "grocery store":
     stop_moving()
     stop_engine()  
     print("We arrived at the grocery store, nom nom nom!")
+
+else:
+    print("this is not a valid destination for this version of Tesla AutoPilot, pay Elon Musk 1 million dollars and you might not die in a self driving accident!")
