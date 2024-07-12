@@ -4,7 +4,10 @@ def move_forward():
     print("moving forward")
 
 def stop_moving():
-    print("stop")
+    print("stop at stop sign")
+
+def stop():
+    print("stop")    
 
 def turn(direction):
     print(f"turning {direction}")    
@@ -13,10 +16,13 @@ def start_engine():
     print("starting engine")    
 
 def stop_engine():
-    print("stopping engine")    
+    print("turn off engine")    
 
 def park():
-    print("pull in to parking spot")   
+    print("pull in to a parking spot")   
+
+def reverse():
+    print("back out of the drive-way")    
 
 destination = input("Where do you want to go? ")
 
@@ -24,6 +30,7 @@ destination = input("Where do you want to go? ")
 
 if destination == "school":
     start_engine()
+    reverse()
     move_forward()
     stop_moving()
     turn("right")
@@ -32,13 +39,14 @@ if destination == "school":
     turn("left")
     move_forward()
     park()
-    stop_moving()
+    stop()
     stop_engine()
     print("We arrived at the school, hooray science!")
 
 
 elif destination == "grocery store":
     start_engine()
+    reverse()
     move_forward()
     stop_moving()
     turn("left")
@@ -47,9 +55,24 @@ elif destination == "grocery store":
     turn("right")
     move_forward()
     park()
-    stop_moving()
+    stop()
     stop_engine()  
     print("We arrived at the grocery store, nom nom nom!")
 
+elif destination == "restaurant":
+    start_engine()
+    reverse()
+    move_forward()
+    stop_moving()
+    move_forward()
+    stop_moving()
+    turn("right")
+    move_forward()
+    park()
+    stop()
+    stop_engine()  
+    print("We arrived at the Bucca di Beppo, noms all night!")
+
+
 else:
-    print("this is not a valid destination for this version of Tesla AutoPilot, pay Elon Musk 1 million dollars and you might not die in a self driving accident!")
+    print("This is not a valid destination for this version of Tesla AutoPilot, pay Elon Musk 1 million dollars or the vehicle will catch fire in 30 seconds!!!")
