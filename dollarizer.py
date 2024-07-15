@@ -4,6 +4,9 @@
 #def eurizer():
  #  return input1.replace("e", "€")
 
+#def wonky_text()
+ #  return input1.replace("s", "$").replace("e", "€").replace("i", "£")
+
 def replacer():
    return input1.replace("s", "$").replace("e", "€").replace("i", "£").replace(input2, input3)
 
@@ -13,7 +16,7 @@ input2 = input("please define character to be replaced ")
 
 input3 = input("please define replacement character ")
 
-print(f"Wonky Text: {replacer()}")
+print(f"Replacer: {replacer()}")
 
 def celsius_to_farenheit():
     return farenheit
