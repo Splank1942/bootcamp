@@ -13,7 +13,7 @@ input2 = input("please define character to be replaced ")
 
 input3 = input("please define replacement character ")
 
-print(replacer())
+print(f"Wonky Text: {replacer()}")
 
 def celsius_to_farenheit():
     return farenheit
@@ -22,7 +22,7 @@ celsius = int(input("what is the temperature in celcius? "))
 
 farenheit = celsius * 9/5 + 32
 
-print(celsius_to_farenheit())
+print(f"Celcius to Farenheit: {celsius_to_farenheit()}")
 
 def age_in_days():
     return in_days
@@ -32,7 +32,7 @@ in_years = int(input("How old are you in years? "))
 
 in_days = in_years * 365
 
-print(age_in_days())
+print(f"Age in days: {age_in_days()}")
 
 def simple_interest():
     return si
@@ -46,7 +46,7 @@ time = int(input("Enter time in years "))
 
 si = principle * rate * time
 
-print(simple_interest())
+print(f"Simple Intrest {simple_interest()}")
 
 def plan_finances():
     return target < si 
@@ -61,4 +61,4 @@ si = principle * rate * time
 
 target = int(input("enter your target return amount "))
  
-print(plan_finances())
+print(f"Plan Finances: {plan_finances()}")
