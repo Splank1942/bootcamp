@@ -1,6 +1,5 @@
 import math
 
-
 def rectangle_area():
     return rec_area
 
@@ -17,7 +16,6 @@ def circle_details():
     print(f"The circumference of the circle is: ",circum_circle)
     print(f"the area of the circle is: ",area_circle)
     
-
 def geometry():
     if square_perim > circum_circle:
         print("The square has a larger perimeter")
@@ -29,19 +27,12 @@ def geometry():
     else:
         print("The circle has a larger area")
     
-
-    
-    
-
-
 x = int(input("what is side one of the rectangle? "))
 y = int(input("what is side two of the rectangle? "))
 
 rec_area = x * y
 
 print(f"The area of the rectangle is:",rectangle_area())
-
-
 
 r = int(input("What is the Radius of the Circle? "))
 
@@ -51,7 +42,6 @@ print(f" The radius of the circle is:",circle_area())
 
 a = int(input("What is the first side of the triangle? "))
 b = int(input("What is the second side of the triangle? "))
-
 
 tri_area = (a*b)/2
 
@@ -68,7 +58,6 @@ ra = int(input("what is the radius of the circle? "))
 area_circle = (ra**2) * math.pi
 
 circum_circle = 2 * math.pi * ra
-
 
 circle_details()
 
