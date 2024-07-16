@@ -70,6 +70,6 @@ area_circle = (ra**2) * math.pi
 circum_circle = 2 * math.pi * ra
 
 
-print(circle_details())
+circle_details()
 
-print(geometry())
+geometry()
