@@ -18,8 +18,6 @@ for items in potions:
 
 selection = input("Which of our magical potions would you like to buy ingredients for? ")
 
-p_ing = potions[selection][0:2]
-
 if selection == "Invisibility Potion":
     ing()
 elif selection == "Flying Potion":
