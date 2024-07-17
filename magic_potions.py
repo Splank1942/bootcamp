@@ -1,9 +1,7 @@
-
 def ing():
     print(f"The Ingredients for {selection} are:")
-    print(potions[selection][0])
-    print(potions[selection][1])
-    print(potions[selection][2])
+    for items in potions[selection]: 
+        print(items)
 
 potions = { 
     "Invisibility Potion": ["Moonstone", "Dragon Scale", "Fairy Dust"], 
