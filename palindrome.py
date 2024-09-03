@@ -1,0 +1,14 @@
+def palindrome(x: int):
+    s = str(x)
+    start = 0
+    end =len(s) - 1
+    while start < end:
+        if s[start] == s[end]:
+            start += 1
+            end -= 1
+            continue 
+        else:
+            return False
+    return True
+
+print(palindrome(121))
