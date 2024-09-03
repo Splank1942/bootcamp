@@ -1,5 +1,3 @@
-import math 
-
 fds = 13200 
 cds = 4609
 nyds = 8000
@@ -61,41 +59,28 @@ def nyin_tax(total_income:float) -> float:
     else:
         return 0.103    
 
-def state_tax(total_income):
+def state_tax(total_income:float):
     if state == "California":
        return cin_tax(total_income) * (total_income - cds)
     else:
        return nyin_tax(total_income) * (total_income - nyds)
+    
+def fica(total_income:float):
+    if total_income <=147000:
+        return total_income * 0.0765
+    else:
+        return 147000 * 0.0765
 
 
 total_income = float(input("What is your gross yearly income? "))
 state = input("What state do you live in? ")
 ftax = fin_tax(total_income) * (total_income - fds) 
 stax = state_tax(total_income)
-ttax = ftax + stax 
+ficatax = fica(total_income)
+ttax = ftax + stax + ficatax
 takehome = total_income - ttax
-print(f"total federal tax to be paid is {ftax}")
-print(f"total tax to be paid is {ttax}")
-print(f" Your yearly take home income is {takehome}")
-
-
-
-
-
-
-##print("Welcome to the tax calculator")
-
-##income = input("What is your gross yearly income? ")
-
-
-
-
-
-#def calculate_california_tax() 
-
-#def calculate_new_york_tax()
-
-
-
-
-
+print(f"Your total federal tax to be paid is: {ftax}")
+print(f"Your total {state} tax to be paid is: {stax}")
+print(f"Your FICA tax is: {ficatax}")
+print(f"Your total taxes to be paid is: {ttax}")
+print(f"Your yearly take home income is: {takehome}")
