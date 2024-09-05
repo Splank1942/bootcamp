@@ -29,15 +29,3 @@ if q == "deposit":
     mybankaccount.deposit()
 else:
     mybankaccount.withdrawal()
-
-
-
-
-
-
-
-
-
-
-\
-
