@@ -1,14 +1,16 @@
 class Car:
-    def __init__(self, make, model, year, tires):
+    def __init__(self, make, model, year, tires, tiretype, color):
+        self.color = color
         self.make = make
         self.model = model
-        self.year = year
         self.tires = tires
-    
+        self.tiretype = tiretype
+        self.year = year    
+        
     def start_engine(self):
-        print(f"The {self.year} {self.make} {self.model}'s engine starts, it has {self.tires} tires.")
+        print(f"The {self.color} {self.year} {self.make} {self.model}'s engine starts, it has {self.tires} {self.tiretype} tires.")
 
-my_car = Car("Toyota", "Corolla", 2020, 4)
-my_car2 = Car("Lexus", "NX 300 F Sport", 2018, 4)
+my_car = Car("Toyota", "Corolla", 2020, 4, "All-Terrain", "Red")
+my_car2 = Car("Lexus", "NX 300 F Sport", 2018, 4, "Sport", "Onyx")
 my_car.start_engine()
 my_car2.start_engine()
