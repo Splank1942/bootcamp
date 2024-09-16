@@ -1,0 +1,39 @@
+{%extends 'todo/layout.html' %}
+
+{% block content %}
+<h1>What Will You do Today?</h1>
+        <div class="input-container">
+            <form method="POST" action="{% url 'todo:add_task' %}">
+                {% csrf_token %}
+            {{form}}
+            <button onclick="addtask()" id="addBtn" class="btn btn-primary">Add</button>
+        </form>
+        </div>
+        <div id="list-container" class="mt-4">
+            <ul id="task-list-1" class="task-list list-group">
+            <h4>Priority 1</h4> 
+            {% for task in tasks %}
+                {% if task.priority == 1 %}
+                    <li><input type="checkbox" class="form-check-input"><span class="task-text">{{ task.name }}</span></li>
+                {% endif %}
+            {% endfor %}    
+            </ul>
+            <ul id="task-list-2" class="task-list list-group">
+            <h4>Priority 2</h4>
+            {% for task in tasks %}
+                {% if task.priority == 2 %}
+                    <li><input type="checkbox" class="form-check-input"><span class="task-text">{{ task.name }}</span></li>
+                {% endif %}
+            {% endfor %} 
+            </ul>
+            <ul id="task-list-3" class="task-list list-group">
+            <h4>Priority 3</h4>
+            {% for task in tasks %}
+                {% if task.priority == 3 %}
+                    <li><input type="checkbox" class="form-check-input"><span class="task-text">{{ task.name }}</span></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}   
