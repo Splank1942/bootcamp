@@ -1,9 +1,9 @@
-// Get the elements
+
 const findOutMoreBtn = document.getElementById("findOutMoreBtn");
 const emailFormPopup = document.getElementById("emailFormPopup");
 const closePopup = document.getElementById("closePopup");
 
-// Event listeners for opening and closing the popup
+
 findOutMoreBtn.addEventListener("click", function() {
     emailFormPopup.style.display = "block";
 });
@@ -21,13 +21,13 @@ successAlert.textContent = "Thank you! Please check your email: ";
 successAlert.style.display = "none";
 
 emailForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const email = emailInput.value;
     console.log("Email:", email);
     successAlert.textContent += email
 
-    // Display the success alert
+
     emailForm.style.display = "none";
     const findOutMoreBtn = document.getElementById("findOutMoreBtn");
     console.log(findOutMoreBtn.nextSibling)
